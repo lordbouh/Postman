@@ -561,7 +561,8 @@
 							"\r",
 							"for (let i in response_data)\r",
 							"{\r",
-							"let index_Cur_ID = response_data[i].Cur_ID;\r",
+							"    let index_Cur_ID = response_data[i].Cur_ID.toString();\r",
+							"\r",
 							"    pm.sendRequest({\r",
 							"    url: 'http://54.157.99.22:80/curr_byn',\r",
 							"    method: 'POST',\r",
@@ -575,7 +576,7 @@
 							"    else {console.log(\"String is absent\");\r",
 							"    console.log(err)}; \r",
 							"} else if  (res.status === 500) return;\r",
-							"}}\r",
+							"}};\r",
 							"\r",
 							"//const status_response_code = res1.map(tool => tool.status);\r",
 							""
